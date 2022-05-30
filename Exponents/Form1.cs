@@ -30,24 +30,24 @@ namespace Exponents
             int num;
 
             // INPUT
-            num = Convert.ToInt32(xInputTextBox.Text);
+            num = Convert.ToInt32(UxInputTextBox.Text);
 
             // PROCESS
             /* calculate the square of the number and add it to the output - 
              * do this with a method call that allows you to pass the number
              * and then receive the answer */
-            xOutputLabel.Text = "Squared is: " + Square(num).ToString();
-            xOutputLabel.Visible = true;
+            UxOutputLabel.Text = "Squared is: " + Square(num).ToString();
+            UxOutputLabel.Visible = true;
 
             /* calculate the cube of the number and add it to the output - 
              * do this by creating a methd as in the squaring example above */
-            xOutputLabel.Text += "\nCubed is: " + num.ToString();
+            UxOutputLabel.Text += "\nCubed is: " + num.ToString();
 
             // OUTPUT
             // set the output to visible
 
             // turn the Go button off
-            xGoButton.Enabled = false;
+            UxGoButton.Enabled = false;
         }
 
         public int Square(int num)
@@ -67,7 +67,7 @@ namespace Exponents
             // the input and output text should be emptied
             // turn the output to invisible
             // turn the Go button back on
-            xGoButton.Enabled = true;
+            UxGoButton.Enabled = true;
         }
 
     }
