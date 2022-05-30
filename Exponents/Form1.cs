@@ -8,8 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 
 /**************************************
- * Name:
- * Date:
+ * Name: John R. Allen
+ * Date: 05/01/2022
  * Description: A program using user-created method
  *              for the math function Square and Cube
  * Assistance:
@@ -27,31 +27,39 @@ namespace Exponents
         private void xGoButton_Click(object sender, EventArgs e)
         {
             // STORAGE
+            int num;
 
             // INPUT
+            num = Convert.ToInt32(xInputTextBox.Text);
 
             // PROCESS
             /* calculate the square of the number and add it to the output - 
              * do this with a method call that allows you to pass the number
              * and then receive the answer */
+            xOutputLabel.Text = "Squared is: " + Square(num).ToString();
+            xOutputLabel.Visible = true;
 
             /* calculate the cube of the number and add it to the output - 
              * do this by creating a methd as in the squaring example above */
+            xOutputLabel.Text += "\nCubed is: " + num.ToString();
 
             // OUTPUT
             // set the output to visible
 
             // turn the Go button off
+            xGoButton.Enabled = false;
         }
 
         public int Square(int num)
         {
             // we will create this code in class
+            return num * num;
         }
 
         public int Cube(int num)
         {
             // we will create this code in class
+            return 0;
         }
 
         private void xResetButton_Click(object sender, EventArgs e)
@@ -59,6 +67,7 @@ namespace Exponents
             // the input and output text should be emptied
             // turn the output to invisible
             // turn the Go button back on
+            xGoButton.Enabled = true;
         }
 
     }
